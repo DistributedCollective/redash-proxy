@@ -12,6 +12,6 @@
     "LOG_LEVEL": "debug",
     "PORT": "3000",
     "POSTGRES_PORT": "5432",
-    "POSTGRES_DB": "sov-redash-proxy-main"
+    "POSTGRES_DB": "sov-redash-proxy-test"
   }
 }
