@@ -1,0 +1,17 @@
+{
+  "app_name": "redash-proxy",
+  "aws_region": "us-east-2",
+  "k8s_cluster_name": "k8-mainnet",
+  "registry": "docker.io",
+  "image_name": "sovryn/redash-proxy",
+  "prod_branch": "main",
+  "dev_branch": "development",
+  "dockerfile_path": ".",
+  "APP_ENV_VARS": {
+    "APP_NAME": "redash-proxy",
+    "LOG_LEVEL": "debug",
+    "PORT": "3000",
+    "POSTGRES_PORT": "5432",
+    "POSTGRES_DB": "sov-redash-proxy-main"
+  }
+}
