@@ -25,8 +25,8 @@ app.use((req: Request, _res: Response, next: NextFunction) => {
 })
 
 app.get('/', (req, res) => {
-  req.log.info(req, 'Sovryn boilerplate Service Running. Stay Sovryn.')
-  res.send('Sovryn boilerplate Service Running. Stay Sovryn.')
+  req.log.info(req, 'Sovryn Redash Proxy Service Running. Stay Sovryn.')
+  res.send('Sovryn Redash Proxy Service Running. Stay Sovryn.')
 })
 
 app.use('/proxy/*', proxyRouter)
