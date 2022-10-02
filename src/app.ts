@@ -4,7 +4,7 @@ import express, { NextFunction, Request, Response } from 'express'
 import helmet from 'helmet'
 import expressRequestId from 'express-request-id'
 import log from './logger'
-import { router as userRouter } from './routes/user.route'
+import { router as proxyRouter } from './routes/proxy.route'
 import responseTime from 'response-time'
 import errorHandler from './errorHandlers/errorHandler'
 import { HTTP404Error } from './errorHandlers/baseError'
@@ -25,11 +25,11 @@ app.use((req: Request, _res: Response, next: NextFunction) => {
 })
 
 app.get('/', (req, res) => {
-  req.log.info(req, 'Sovryn boilerplate Service Running. Stay Sovryn.')
-  res.send('Sovryn boilerplate Service Running. Stay Sovryn.')
+  req.log.info(req, 'Sovryn Redash Proxy Service Running. Stay Sovryn.')
+  res.send('Sovryn Redash Proxy Service Running. Stay Sovryn.')
 })
 
-app.use('/user/', userRouter)
+app.use('/proxy/*', proxyRouter)
 
 app.use(function (_req: Request, res: Response, _next: NextFunction) {
   res.status(404).send("Sorry can't find that!")
