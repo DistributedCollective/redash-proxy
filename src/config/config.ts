@@ -31,36 +31,11 @@ const config = convict({
     default: 'info',
     env: 'LOG_LEVEL'
   },
-  postgresHost: {
-    doc: 'postgres host',
-    format: String,
-    default: 'sov-postgres',
-    env: 'POSTGRES_HOST'
-  },
-  postgresPort: {
-    doc: 'postgres port',
-    format: 'port',
-    default: 5432,
-    env: 'POSTGRES_PORT'
-  },
-  postgresUser: {
-    doc: 'postgres user',
-    format: String,
-    default: 'sov-postgres',
-    env: 'POSTGRES_USER'
-  },
-  postgresPassword: {
-    doc: 'postgres password',
-    format: '*',
-    default: '',
-    env: 'POSTGRES_PASSWORD',
-    sensitive: true
-  },
-  postgresDatabase: {
-    doc: 'postgres database',
-    format: String,
-    default: 'sov-redash-proxy',
-    env: 'POSTGRES_DB'
+  redashUrl: {
+    doc: 'base url for redash',
+    format: 'url',
+    default: 'https://redash.sovryn.app',
+    env: 'REDASH_URL'
   }
 })
 
