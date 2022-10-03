@@ -23,6 +23,7 @@ spec:
     spec:
       containers:
       - image: sovryn/redash-proxy
+        imagePullPolicy: Always
         name: redash-proxy
         resources: {}
         terminationMessagePath: /dev/termination-log
