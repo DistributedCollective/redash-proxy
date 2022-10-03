@@ -32,7 +32,7 @@ describe('GET /proxy/*', () => {
   })
 
   it('returns error for wrong API key', async () => {
-    const redashQuery = async () => {
+    const redashQuery = async (): Promise<any> => {
       return await axios
         .get(
           'https://redash.sovryn.app/api/queries/207/results.json?api_key=LkO9lvuzaAnKXihpH855A90yPlEKvjbitBR4KWLg'
